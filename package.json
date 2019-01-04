@@ -1,10 +1,10 @@
 {
   "name": "react-native-get-pixel",
   "version": "0.0.5",
-  "description": "Returns the  color from an image at a given coordinate.",
+  "description": "Returns the color from an image at a given coordinate.",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bvic23/react-native-get-pixel.git"
+    "url": "git+https://github.com/kevqiu/react-native-get-pixel.git"
   },
   "keywords": [
     "react-native",

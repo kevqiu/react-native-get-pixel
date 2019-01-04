@@ -16,6 +16,8 @@ import com.facebook.react.bridge.WritableNativeArray;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.File;
+import java.io.FileInputStream;
 
 import static java.lang.Math.PI;
 import static java.lang.Math.cos;
@@ -126,7 +128,8 @@ class RNPixelColorModule extends ReactContextBaseJavaModule {
     }
 
     private Bitmap loadImage(final String imageName) throws IOException {
-        final InputStream inputStream = context.getAssets().open("drawable/" + imageName + ".png");
+        File file = new File(imageName);
+        FileInputStream fileInputStream = new FileInputStream(file);
         final Drawable drawable = Drawable.createFromStream(inputStream, null);
         return ((BitmapDrawable) drawable).getBitmap();
     }
