@@ -130,7 +130,7 @@ class RNPixelColorModule extends ReactContextBaseJavaModule {
     private Bitmap loadImage(final String imageName) throws IOException {
         File file = new File(imageName);
         FileInputStream fileInputStream = new FileInputStream(file);
-        final Drawable drawable = Drawable.createFromStream(inputStream, null);
+        final Drawable drawable = Drawable.createFromStream(fileInputStream, null);
         return ((BitmapDrawable) drawable).getBitmap();
     }
 }
